@@ -1,0 +1,260 @@
+*{
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Roboto Slab';
+}
+
+:root{
+    --color-green: #3FBF9B;
+    --color-blue: #0442BF;
+    --color-lgreen: #BDD959;
+    --color-pink: #EACAF3;
+    --color-purple: #6E6BBF;
+
+    --font-big: 2em;
+    --font-medio: 1.1em;
+    --font-small: 0.875em;
+}
+
+.maxWidth{
+    max-width: 90em;
+
+} /* 1440px/16 = 90em */
+
+body{
+    background-color: var(--color-lgreen);
+    margin: 0;
+}
+
+p{
+    color: var(--color-pink);
+}
+.header{
+    text-align: center;
+    margin: auto; /* para todos os elementos ficarem no centro */
+    color: var(--color-lgreen);
+}
+
+.header_logo{
+    width: 5.9em;
+    height: 100%;
+    margin: 1em;
+}
+
+.header_nav {
+    background-color: var(--color-purple);
+}
+
+ul{
+    margin: 0;
+}
+
+.header_nav ul{
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: .8em;
+}
+
+.header_nav a{
+    color: var(--color-blue);
+    display: block;
+    padding: 1em;
+}
+
+.header_nav a:hover{
+    background-color: color-mix(in srgb, var(--color-blue), #ffffff 20%);
+    color: var(--color-pink);
+}
+
+.trailer{
+    background-color: var(--color-pink);
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1.5em;
+    line-height: 1.5em;
+}
+
+.trailer div{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+.trailer_title{
+    margin-top: 0;
+    padding-top: .5em;
+    color: var(--color-blue);
+}
+
+.trailer_title h1{
+    font-size: var(--font-big);
+    margin-bottom: 1em;
+}
+
+.trailer_paragrafo{
+    font-size: var(--font-medio);
+    color: var(--color-blue);
+}
+
+.trailer_botao{
+    display: inline-block;
+    margin-top: 1em;
+    padding: 1em 2em;
+    background-color: var(--color-blue);
+    color: var(--color-pink);
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+
+.trailer_botao:hover{
+    background-color: var(--color-lgreen);
+    color: var(--color-blue);
+}
+
+.main_content{
+    background-color: var(--color-purple);
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.main_content div{
+    margin: auto;
+    padding: 1em;
+    width: 80%;
+}
+
+.main_content_title{
+    color: var(--color-lgreen);
+}
+
+.icon_img{
+    width: 5.5em;
+}
+
+article .icon_img{
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+
+article .icon_img:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.trailer_botao_article{
+    display: inline-block;
+    margin-top: 1em;
+    padding: 1em 2em;
+    background-color: var(--color-blue);
+    border-radius: 8px;
+    color: var(--color-lgreen);
+    text-transform: uppercase
+}
+
+.trailer_botao_article:hover{
+    background-color: color-mix(in srgb, var(--color-pink), #ffffff 20%);
+    color: var(--color-blue);
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.col{
+    flex: 1 0 auto;
+    width: 100%;
+    flex-grow: 1; /* aumenta seu tamanho se houver espaço*/
+    flex-shrink: 0; /* faz com que o elemento não diminua*/
+    flex-basis: auto; /* depende do width do elemento*/
+}
+
+.col-12{
+    width: 100%;
+}
+
+.trailer_video{
+    display: none;
+}
+
+
+footer{
+    background-color: var(--color-lgreen);
+    font-size: 18px;
+    color: var(--color-blue);
+    text-align: center;
+    padding: 0;
+}
+
+@media screen and (min-width: 48em) {
+    .col-6{
+        width: calc(50% - 2rem);
+        
+    }
+    
+}
+
+@media screen and (min-width: 48em){
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+
+    .header_logo{
+        margin-left: 2em;
+    }
+
+    .header_nav{
+        background-color: initial;
+    }
+
+    .header_nav ul{
+        margin-right: 2em;
+        font-size: .9em;
+    }
+
+    .header_nav li{
+        display: inline-block;
+    }
+
+    .header_nav a{
+        border-radius: 5px;
+    }
+
+    .header_nav a:hover{
+        background-color: color-mix(in srgb, var(--color-blue), #ffffff 20%);
+        color: var(--color-pink);
+    }
+}
+
+@media screen and (min-width: 48em){
+    .trailer_botao{
+        display: none;
+    }
+
+    .trailer{  
+        background-image: url(../imagem/bg.jpg);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: repeat;
+        background-color: initial;
+    }
+
+    .trailer_video {
+        display: block;
+    }
+
+    .trailer_video .tamanho{
+        border-radius: .8em;
+        margin-bottom: 1em;
+    }
+
+    .trailer_paragrafo{
+        margin-bottom: 2em;
+    }
+}
